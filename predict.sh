@@ -8,7 +8,6 @@
 #BSUB -R "select[rtx2080||gtx1080||p100]"
 #BSUB -gpu "num=1:mode=shared:mps=yes"
 #BSUB -R "rusage[mem=32GB]"
-#BSUB -x
 #-------------------------------------
 # REMEMBER TO PASS $SRC and $DST TO THE JOB COMMAND:
 # bsub -env "PARENT_DIRECTORY=$PARENT_DIRECTORY, REMOTE=$REMOTE" < predict.sh
@@ -17,7 +16,7 @@
 # REMOTE="$REMOTE"  # <<<<<<<<<<<<<<<<<<<<<<
 #-------------------------------------
 module unload python
-module load anaconda
+module load conda
 module load cuda/10.2
 module load rclone
 conda activate yolov5

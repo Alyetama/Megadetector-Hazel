@@ -35,7 +35,7 @@ git clone https://github.com/Alyetama/Megadetector-Hazel.git
 cd Megadetector-Hazel
 git clone https://github.com/ultralytics/yolov5.git
 
-module load anaconda || module load conda
+module load conda
 conda create -n yolov5 python=3.8 --yes
 conda activate yolov5
 pip install -r yolov5/requirements.txt
